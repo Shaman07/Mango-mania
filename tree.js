@@ -9,14 +9,16 @@ this.x = this.body.position.x;
 this.y = this.body.position.y;
 this.width = width;
 this.height = height;
-World.add(world ,this.body);     
+World.add(world ,this.body); 
+this.image = loadImage("tree.png");    
 }
 display() {
 var angle = this.body.angle
 rotate(angle);
 push();
 translate(push);
-ellispeMode(CENTER);
+image(this.image , 0 , 0 ,this.width,this.height);    
+imageMode(CENTER);
 pop();
 }
 }
